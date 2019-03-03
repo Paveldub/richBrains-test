@@ -508,6 +508,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include laptop {
+                height: 577px;
+            }
  
             a {
                 transform: rotate(270deg);
@@ -533,6 +537,10 @@
             flex-direction: column;
             width: 300px;
             display: none;
+
+            @include laptop {
+                height: 577px;
+            }
 
             &-img {
                 text-align: center;
