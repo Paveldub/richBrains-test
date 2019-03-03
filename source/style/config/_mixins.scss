@@ -1,0 +1,203 @@
+@mixin OpenSansItalic {
+  font-family: OpenSansItalic;
+}
+
+@mixin OpenSansLight {
+  font-family: OpenSansLight;
+}
+
+@mixin OpenSansExtraboldItalic {
+  font-family: OpenSansExtraboldItalic;
+}
+
+@mixin OpenSansExtrabold {
+  font-family: OpenSansExtrabold;
+}
+
+@mixin OpenSansSemiboldItalic {
+  font-family: OpenSansSemiboldItalic;
+}
+
+@mixin OpenSansBold {
+  font-family: OpenSansBold;
+}
+
+@mixin OpenSansLightItalic {
+  font-family: OpenSansLightItalic;
+}
+
+@mixin OpenSansSemibold {
+  font-family: OpenSansSemibold;
+}
+
+@mixin OpenSansBoldItalic {
+  font-family: OpenSansBoldItalic;
+}
+
+@mixin OpenSans {
+  font-family: OpenSans;
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+@mixin triangle($width, $dir, $color) {
+  width: 0;
+  height: 0;
+  display: block;
+  @if $dir==up {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $width solid $color;
+  }
+  @else if $dir==down {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  }
+  @else if $dir==left {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  }
+  @else if $dir==right {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  }
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.hide {
+  display: none!important; // for js
+}
+
+/// figures
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  -o-border-radius: $width/2;
+  -ms-border-radius: $width/2;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+@mixin triangle($width, $dir, $color) {
+  width: 0;
+  height: 0;
+  display: block;
+  @if $dir==up {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $width solid $color;
+  }
+  @else if $dir==down {
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  }
+  @else if $dir==left {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  }
+  @else if $dir==right {
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  }
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.hide {
+  display: none!important; // for js
+}
+
+$base-font-size: 16px;
+// pixel to rem
+@function px-to-rem ($target, $context: $base-font-size) {
+  @return ($target / $context) * 1rem;
+} 
+
+// screen sizes
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop-1290 {
+  @media screen and (max-width: 1290px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+	@content;	
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+	@content;	
+	}
+}
+
+// iphones
+@mixin iphone {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}
+
+@mixin iphone-4 {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin ihphoneX-375 {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin iphone-7plus {
+  @media screen and (max-width: 414px) {
+    @content;
+  }
+}
+

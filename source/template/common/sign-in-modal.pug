@@ -1,0 +1,53 @@
+.sign-in-modal#signInModal
+    .sign-in-modal__content 
+        .tabs
+            ul.tabs__menu
+                li.tabs__menu-item.tabs__menu--active(data-tabs='one') Sign in
+                li.tabs__menu-item(data-tabs='two') New account
+            .tabs__wrap-element
+                .tabs__element.tabs__element--active#one
+                    .tabs__element-content
+                        form.tabs__element-form#form
+                            .tabs__element-input 
+                                input(type="mail" placeholder="Email" name="email")
+                            .tabs__element-input.tabs__element-input-relative
+                                input(type="password" placeholder="Password" name="password")#password
+                                .tabs__element-input-hide#hide
+                                    h4 Hide
+                            .tabs__element-input-checkbox
+                                label.tabs__element-label
+                                    .tabs__element-wrapper
+                                        input(type="checkbox" name="checkbox")
+                                        .tabs__element-text
+                                            h3 Remember me
+                            .errors
+                                #emailError 
+                                #passwordError      
+                            .tabs__element-button 
+                                button(type="submit").button Login      
+                    .tabs__element-forgot-pass#forgotPassword
+                        a(href="#") Forgot Password?                        
+                .tabs__element#two
+                    .tabs__element-content
+                            form.tabs__element-form#formSecondTab
+                                .tabs__element-input 
+                                    input(type="text" placeholder="Username" name="user")
+                                .tabs__element-input 
+                                    input(type="mail" placeholder="Email" name="emailSecond")
+                                .tabs__element-input.tabs__element-input-relative 
+                                    input(type="password" placeholder="Password" name="passwordSecond")#passwordSecond
+                                    .tabs__element-input-hide#hideForgot 
+                                        h4 Hide
+                                .tabs__element-input-checkbox
+                                    label.tabs__element-label
+                                        .tabs__element-wrapper
+                                            input(type="checkbox" name="checkbox")
+                                            .tabs__element-text
+                                                h3 I agreen to the #[a(href="#") Terms]
+                                .errors
+                                    #userError
+                                    #emailSecondError 
+                                    #passwordSecondError 
+                                    #checkboxSecondError      
+                                .tabs__element-button 
+                                    button(type="submit").button Create Account

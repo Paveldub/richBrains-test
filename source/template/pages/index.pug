@@ -1,0 +1,246 @@
+extends ../_template
+
+block variables
+  - var title = 'RichBrains test'
+
+block content
+  .wrapper 
+    section.hero
+      .container 
+        header.header 
+          .header__logo 
+            img(src="/assets/img/trampoline.png")
+        .content 
+          .content__title(data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce")
+            h1 Батут - 
+            span головокружение <br> радостного полета
+        .arrow-wrapper    
+          .arrow-down 
+            a(href="#second")
+              img(src="/assets/img/arrow-down.png")
+    section.second#second
+      .content-second 
+        .content-second__left 
+        .content-second__right 
+          .content-second__right-logo(data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce") 
+            img(src="/assets/img/trampoline.png")
+          .content-second__right-title(data-sal="slide-up" data-sal-delay="500" data-sal-easing="ease-out-bounce") 
+            h2 Батут — это отличное развлечение,
+          .content-second__right-text(data-sal="slide-up" data-sal-delay="700" data-sal-easing="ease-out-bounce")  
+            p которое принесет море положительных эмоций и поможет поддержать отличную физическую форму. Ведь прыжки на батуте – не только смешные и забавные трюки, но и один из олимпийских видов спорта. 
+    section.trampolines-mobile 
+      .tabs
+        ul.tabs__menu
+          li.tabs__menu-item.tabs__menu--active(data-tabs='one') MOD 1
+          li.tabs__menu-item(data-tabs='two') MOD 2
+        .tabs__wrap-element
+          #one.tabs__element.tabs__element--active
+            .tabs__element-content.tabs__element--active
+              .tabs-wrapper
+                .select
+                  select.select-elem
+                    - for (let i = 0; i < 10; i++)
+                      option Диаметр батута
+                .tabs-title 
+                  h3 Батут с защитной сеткой <br> MOD1 252см - 8ft
+                .tabs-hot 
+                  i.sprite.sprite-hot
+                  h3 Хит продаж
+                .tabs-trampoline 
+                  img(src="/assets/img/tramp-1.png")  
+                ul.tabs-list  
+                  each item in ['Обладает высокой устойчивостью', 'Подходит для 2 маленьких детей до 7 лет', 'Максимальная нагрузка 100 кг.']
+                    li.tabs-list__item 
+                      p #{item}
+                .tabs-basket
+                  .tabs-basket__left 
+                    .tabs-basket__title 
+                      .tabs-basket__title-wrap
+                        h3 1 928 000
+                        span руб.
+                      .tabs-basket__title-wrap
+                        h3 192
+                        span руб  
+                        h3 80
+                        span коп.
+                  .tabs-basket__right  
+                    .button 
+                      a(href="#")
+                        .button__left 
+                          span Купить
+                        .button__right.button__right--width 
+                          i.sprite.sprite-trolley 
+          #two.tabs__element
+            .tabs__element-content
+              .tabs-wrapper
+                .select
+                  select.select-elem
+                    - for (let i = 0; i < 10; i++)
+                      option Диаметр батута
+                .tabs-title 
+                  h3 Батут с защитной сеткой <br> MOD1 252см - 8ft
+                .tabs-hot 
+                  i.sprite.sprite-hot
+                  h3 Хит продаж
+                .tabs-trampoline 
+                  img(src="/assets/img/tramp-mob.png")  
+                ul.tabs-list  
+                  each item in ['Обладает высокой устойчивостью', 'Подходит для 2 маленьких детей до 7 лет', 'Максимальная нагрузка 100 кг.']
+                    li.tabs-list__item 
+                      p #{item}
+                .tabs-basket
+                  .tabs-basket__left 
+                    .tabs-basket__title 
+                      .tabs-basket__title-wrap
+                        h3 1 928 000
+                        span руб.
+                      .tabs-basket__title-wrap
+                        h3 192
+                        span руб  
+                        h3 80
+                        span коп.
+                  .tabs-basket__right  
+                    .button 
+                      a(href="#")
+                        .button__left 
+                          span Купить
+                        .button__right.button__right--width 
+                          i.sprite.sprite-trolley 
+    section.trampolines
+      .trampolines-wrapper#wrapper
+        .trampolines__title 
+          h3 Выберите диаметр батута
+        .reseller-progress
+          .container
+            .reseller-progress__progress-wrapper
+              .reseller-progress__progress-level 
+                .progress-level__point
+                .progress-level__level-name
+                  h4 183 см
+                  span 6 ft
+              .reseller-progress__progress-level
+                .progress-level__point
+                .progress-level__level-name
+                  h4 241 см
+                  span 8 ft
+              .reseller-progress__progress-level
+                .progress-level__point.current
+                .progress-level__level-name
+                  h4 278 см
+                  span 9 ft
+              .reseller-progress__progress-level
+                .progress-level__point
+                .progress-level__level-name
+                  h4 278 см
+                  span 9 ft
+              .reseller-progress__progress-level
+                .progress-level__point
+                .progress-level__level-name
+                  h4 278 см
+                  span 9 ft
+              .reseller-progress__progress-level
+                .progress-level__point
+                .progress-level__level-name
+                  h4 278 см
+                  span 9 ft
+              .reseller-progress__progress-level
+                .progress-level__point   
+                .progress-level__level-name
+                  h4 278 см
+                  span 9 ft
+        .container-small          
+          .trampolines__left 
+            .trampolines__left-title 
+              h3 Батут с защитной сеткой <br> MOD1 252см - 8ft
+            .trampolines__left-hot
+              i.sprite.sprite-hot
+              h3 Хит продаж
+            ul.trampolines__left-list 
+              each item in ['Обладает высокой устойчивостью', 'Подходит для 2 маленьких детей до 7 лет', 'Максимальная нагрузка 100 кг.']
+                li.trampolines__left-item 
+                  p #{item}
+            .trampolines__left-price 
+              .trampolines__left-price-elem
+                h4 1 928 000 
+                span руб.
+              .trampolines__left-price-right 
+                .button 
+                  a(href="#")
+                    .button__left 
+                      span Купить
+                    .button__right 
+                      i.sprite.sprite-arrow-right-black
+          .trampolines__right 
+            img(src="/assets/img/trampoline-changed.png")
+            .trampolines__right-zoom 
+              i.sprite.sprite-zoom
+          .hidden-img-first
+            img(src="/assets/img/tramp-1.png")
+          .hidden-img-second 
+            img(src="/assets/img/tramp-2.png")  
+          ul.tabs-menu 
+              li.tabs-menu__item
+                .tabs-menu__item-block 
+                  .tabs-menu__item-block-img 
+                    img(src="/assets/img/tramp-1.png")
+                    .tabs-menu__item-block-guarantee 
+                      .tabs-menu__item-block-guarantee-text
+                        span 18 <br>
+                        h4 месяцев <br>
+                        h4 гарантии
+                  .tabs-menu__item-block-zoom 
+                    img(src="/assets/img/zoom-leg.png")
+                  .tabs-menu__item-block-text 
+                    p Повышенная устойчивость за счет <br> дополнительных ножек 
+                .tabs-menu__item-back
+                  a(href="#") MOD 1  
+              li.tabs-menu__item
+                .tabs-menu__item-block 
+                  .tabs-menu__item-block-img 
+                    img(src="/assets/img/tramp-2.png")
+                    .tabs-menu__item-block-guarantee 
+                      .tabs-menu__item-block-guarantee-text
+                        span 12 <br>
+                        h4 месяцев <br>
+                        h4 гарантии
+                    .tabs-menu__item-block-text 
+                      p Оптимальное соотношение цены <br> и качества
+                .tabs-menu__item-back
+                  a(href="#") MOD 2   
+    section.last 
+    .above-footer 
+      .container
+        .above-footer__text 
+          a(href='#') Посмотреть эти батуты в каталоге
+    footer.footer 
+      .container
+        ul.footer__list 
+          li.footer__item 
+            a(href="tel:+375447211110") +375 (44) 721-11-10
+              i.sprite.sprite-velcom
+          li.footer__item 
+            a(href="tel:+375447211110") +375 (44) 721-11-10
+              i.sprite.sprite-mts
+          li.footer__item 
+            a(href="tel:+375447211110") +375 (44) 721-11-10
+              i.sprite.sprite-phone       
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
