@@ -12,12 +12,12 @@ for (let item of items) {
 		if (this.classList.contains('tabs-menu__item--active')){
             this.classList.remove('tabs-menu__item--active');
             wrapper.classList.remove('active');
-            containerSmall.style.maxWidth = '1100px';
+            containerSmall.style.maxWidth = '800px';
 		} else {
 			for (let elem of items){
                 elem.classList.remove('tabs-menu__item--active');
                 wrapper.classList.remove('active');
-                containerSmall.style.maxWidth = '1100px';
+                containerSmall.style.maxWidth = '800px';
 			}
             this.classList.add('tabs-menu__item--active');
             wrapper.classList.add('active');
@@ -29,6 +29,8 @@ for (let item of items) {
 window.addEventListener('resize', () => {
     if (innerWidth >= 1290) {
         containerSmall.removeAttribute('style');
+    } else {
+        containerSmall.style.maxWidth = '800px';
     }
 });
 

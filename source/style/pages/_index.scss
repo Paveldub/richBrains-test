@@ -237,6 +237,10 @@
         justify-content: space-between;
         align-items: center;
 
+        @include desktop-1290 {
+            flex-direction: column;
+        }
+
         @include laptop {
             flex-direction: column;
         }
@@ -244,6 +248,10 @@
         &-elem {
             display: flex;
             align-items: flex-end;
+
+            @include desktop-1290 {
+                margin-bottom: 10px;
+            }
 
             @include laptop {
                 margin-bottom: 20px;
@@ -259,6 +267,7 @@
             h4 {
                 font-size: 30px;
                 @include OpenSansSemibold;
+
             }
         }
     }
@@ -677,7 +686,7 @@
 }
 
 .active {
-    margin-left: 305px;
+    margin-left: 400px;
     transition: all .10s ease-in-out;
 }
 
