@@ -553,6 +553,7 @@
 
             &-img {
                 text-align: center;
+                position: relative;
 
                 @include laptop {
                     margin-top: 50%;
@@ -571,13 +572,9 @@
 
             &-zoom {
                 position: absolute;
-                bottom: 7%;
+                top: 90%;
                 left: 33%;
                 transform: translate(-50%, -50%);
-
-                @include laptop {
-                    bottom: 22%;
-                }
             }
 
             &-guarantee {
