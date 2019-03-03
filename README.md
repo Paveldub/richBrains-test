@@ -1,1 +1,4 @@
-#link: https://paveldub.github.io/fre_repo/
+manual:
+
+1) yarn install 
+2) npm start
