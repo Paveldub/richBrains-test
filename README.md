@@ -1,4 +1,5 @@
 manual:
 
-1) yarn install 
-2) npm start
+1) download
+2) yarn install 
+3) npm start
